@@ -1,0 +1,16 @@
+packages:
+  - name: cloud
+    
+    actions:
+      - name: getCoffee
+        runtime: "python:3.11"
+        limits: 
+          timeout: 5000
+          memory: 256
+      - name: postEmail
+        runtime: "python:3.11"
+        limits: 
+          timeout: 5000
+          memory: 256
+environment:
+  DATABASE_URL: ${DATABASE_URL}
